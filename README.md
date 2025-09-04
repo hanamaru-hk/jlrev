@@ -4,22 +4,21 @@ This is the repository of jlrev which is an app for the JLPT Revision. The app i
 
 ## Requirements
 
-### [First Phrase Requirement](docs/requirements/main.md)
+1. [First Phrase Requirement](docs/requirements/main.md)
 
-### [Future features](docs/requirements/future.md)
+2. [Future features](docs/requirements/future.md)
 
 ## Specification
 
-### [App](docs/spec/app.md)
+1. Frontend
+- [Web](docs/spec/frontend/web.md)
+- [App](docs/spec/frontend/app.md)
+- [Layout](docs/spec/frontend/layout.md)
 
-### [Backend](docs/spec/backend.md)
+2. [Backend](docs/spec/backend.md)
 
-### [Database](docs/spec/database.md)
+3. [Database](docs/spec/database.md) 
 
-### [Layout](docs/spec/layout.md)
+4. [LLM](docs/spec/llm.md)
 
-### [LLM](docs/spec/llm.md)
-
-### [Web](docs/spec/web.md)
-
-## [Logs](docs/log.md)
+5. [Logs](docs/log.md)
