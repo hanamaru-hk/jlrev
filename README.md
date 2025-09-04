@@ -11,9 +11,9 @@ This is the repository of jlrev which is an app for the JLPT Revision. The app i
 ## Specification
 
 1. Frontend
-- [Web](docs/spec/frontend/web.md)
-- [App](docs/spec/frontend/app.md)
-- [Layout](docs/spec/frontend/layout.md)
+  - [Web](docs/spec/frontend/web.md)
+  - [App](docs/spec/frontend/app.md)
+  - [Layout](docs/spec/frontend/layout.md)
 
 2. [Backend](docs/spec/backend.md)
 
