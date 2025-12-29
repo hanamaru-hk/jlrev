@@ -1,4 +1,5 @@
 # Future
+This is just a note for the future planning. Not going to implement at the moment.
 
 ## 1. **Progress Tracking**
 - Visual stats by JLPT level, section, and accuracy.  

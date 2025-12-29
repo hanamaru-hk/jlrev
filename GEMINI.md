@@ -5,7 +5,7 @@
 **Structure:** Monorepo.
 
 ## 2. High-Level Architecture
-The system consists of 4 distinct parts working together:
+The system consists of 5 distinct parts working together:
 
 ### A. Backend APIs (`/backend`)
 *   **Role:** The central nervous system. It handles user auth, database connections, and serves APIs to the frontends.
@@ -31,11 +31,15 @@ The system consists of 4 distinct parts working together:
     *   **Focus:** Native mobile experience for end-users to practice questions.
 
 ### D. Prompts (`/prompts`)
-*   **Role:** Version control for the "Intelligence" of the app.
-*   **Content:** Text/Markdown files containing the system prompts used by the Cronjobs.
+*   **Role:**  the prompts when the cronjob is run.
+*   **Content:** json which the llm api accepts.
+
+### E. database
+* **Role:** store the structures of the database
+*    **Content:** files of the store proc which is used to create the databases
 
 ## 3. Development Workflow
-*   **Monorepo Tooling:** [e.g., Turborepo / Nx / Lerna / Workspaces]
+*   **Monorepo Tooling:** Turborepo
 *   **Conventions:**
     *   Shared types between Backend and Frontend?
     *   Unified linting rules?
