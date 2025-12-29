@@ -9,8 +9,12 @@ The system consists of 5 distinct parts working together:
 
 ### A. Backend APIs (`/backend`)
 *   **Role:** The central nervous system. It handles user auth, database connections, and serves APIs to the frontends.
-*   **Tech Stack:** [Please Specify: e.g., Python FastAPI / Node.js Express / Go]
-*   **Database:** [Please Specify: e.g., PostgreSQL / MongoDB]
+*   **Tech Stack:** Nodejs + expressjs
+*   **Functions:**
+    1. API for SSO Login (google)
+    2. API loading question bank from database 
+    3. API call the llm of the 
+*   **Database:** PostgreSQL
 
 ### B. Cronjobs / Generators (`/cronjobs`)
 *   **Role:** The "Factory". Runs periodically to generate new content.
@@ -29,6 +33,7 @@ The system consists of 5 distinct parts working together:
 *   **App (`/frontend/app`):**
     *   **Tech:** **Flutter**.
     *   **Focus:** Native mobile experience for end-users to practice questions.
+*   Both Web and App follow the same layout design
 
 ### D. Prompts (`/prompts`)
 *   **Role:**  the prompts when the cronjob is run.
@@ -41,5 +46,5 @@ The system consists of 5 distinct parts working together:
 ## 3. Development Workflow
 *   **Monorepo Tooling:** Turborepo
 *   **Conventions:**
-    *   Shared types between Backend and Frontend?
-    *   Unified linting rules?
+    *   Shared types between Backend and Frontend using zod?
+    *   Unified linting rule
