@@ -1,12 +1,21 @@
-# LLM and Cronjob
+# LLM & Cronjobs Specification
 
-## Generate a JSON format of questions / answer based on question type
+## Role
+The "Factory". Runs periodically to generate new content.
 
-- pretrain each question types with data.
-- question type ( e.g. vocabulary, grammar, reading)
+## Workflow
+1.  **Configuration:** Read configuration/topics.
+2.  **Prompts:** Pull prompts from `/prompts` (JSON content accepted by LLM API).
+3.  **Generation:** Call LLM APIs (Gemini/OpenAI).
+4.  **Validation:** Validate JSON output.
+5.  **Storage:** Insert into Backend Database.
 
-### Vocabulary
+## Tech Stack
+- [Likely Python or TypeScript - To be determined]
 
+## Data Structures
+
+### Vocabulary Question Type
 ```ts
 type question =
 {

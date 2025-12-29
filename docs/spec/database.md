@@ -1,13 +1,15 @@
-# Database
+# Database Specification
+
+## Role
+Stores the structures of the database and holds the data.
+Contains files of the stored procedures used to create the databases.
 
 ## Tech Stack
-- MySQL Version
+- **Database:** PostgreSQL
 
-## Function
-- store the login information
-- store
+## Functions
+- Store user login information.
+- Store question banks and generated content.
 
-## Non function
-- 10 concurrent connection
-
-## Database Design ( To be continued )
+## Non-functional Requirements
+- Handle multiple concurrent connections (referenced as 10 in previous notes, to be verified).

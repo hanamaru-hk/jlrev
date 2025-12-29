@@ -1,5 +1,10 @@
-# App
+# App Frontend Specification
 
-This documents contains the specific information which cannot be shared with web app.
+## Tech Stack
+- **Framework:** Flutter
 
-## Use : Flutter
+## Focus
+- **Native Mobile Experience:** For end-users to practice questions on mobile devices.
+
+## Design
+- Follows the shared layout design (see `../frontend/layout.md`).

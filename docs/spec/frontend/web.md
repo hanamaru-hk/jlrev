@@ -1,5 +1,11 @@
-# Web
+# Web Frontend Specification
 
-This documents contains the specific information which cannot be shared with web app.
+## Tech Stack
+- **Framework:** React (Vite or Next.js)
 
-## Stack: React
+## Focus
+1.  **Admin Dashboard:** For reviewing generated questions.
+2.  **User Web Portal:** For users to practice questions.
+
+## Design
+- Follows the shared layout design (see `../frontend/layout.md`).
