@@ -20,6 +20,7 @@ The "Factory". Runs periodically to generate new content.
 type question =
 {
     type: 'vocab' | 'grammar' | 'reading',
+    part: number,
     text: string, 
     answers:
     {
