@@ -1,6 +1,6 @@
 
 import { Request, Response } from 'express';
-import { query } from '../db';
+import { query } from '@repo/shared';
 
 export const getQuestionBanks = async (req: Request, res: Response) => {
     try {

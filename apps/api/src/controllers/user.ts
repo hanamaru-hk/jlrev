@@ -1,6 +1,6 @@
 
 import { Request, Response } from 'express';
-import { query } from '../db';
+import { query } from '@repo/shared';
 
 export const getProfile = async (req: Request, res: Response) => {
     try {

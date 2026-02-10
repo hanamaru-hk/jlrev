@@ -2,7 +2,7 @@
 import { Request, Response, NextFunction } from 'express';
 import { OAuth2Client } from 'google-auth-library';
 import jwt from 'jsonwebtoken';
-import { query } from '../db';
+import { query } from '@repo/shared';
 
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
