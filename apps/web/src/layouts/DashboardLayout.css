@@ -1,0 +1,191 @@
+/* Dashboard Layout Grid */
+.dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--background);
+    color: var(--foreground);
+    overflow-x: hidden;
+    /* Prevent horizontal scroll on mobile drawer open */
+}
+
+/* Sidebar (Left Menu) */
+.dashboard-sidebar {
+    width: 250px;
+    background-color: #f3f4f6;
+    /* Light gray background */
+    border-right: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nav-link {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: #e5e7eb;
+}
+
+/* Main Content Area */
+.dashboard-main {
+    flex: 1;
+    margin-left: 250px;
+    /* Offset for sidebar */
+    padding: 2rem;
+    margin-bottom: 60px;
+    /* Offset for bottom menu if needed, or mobile adjust */
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* Header for Mobile (Hamburger) */
+.mobile-header {
+    display: none;
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    align-items: center;
+    gap: 1rem;
+    position: sticky;
+    top: 0;
+    background-color: var(--background);
+    z-index: 40;
+}
+
+.hamburger-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.hamburger-btn:hover {
+    background-color: #f3f4f6;
+}
+
+/* Bottom Menu */
+.bottom-menu {
+    position: fixed;
+    bottom: 0;
+    left: 250px;
+    /* Aligned with main content start */
+    right: 0;
+    height: 60px;
+    background-color: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 40;
+    padding: 0 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+    /* Sidebar becomes Drawer */
+    .dashboard-sidebar {
+        transform: translateX(-100%);
+        /* Hidden by default */
+    }
+
+    .dashboard-sidebar.open {
+        transform: translateX(0);
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Main content takes full width */
+    .dashboard-main {
+        margin-left: 0;
+        padding: 1rem;
+        padding-bottom: 80px;
+        /* Extra space for bottom menu */
+    }
+
+    /* Show Mobile Header */
+    .mobile-header {
+        display: flex;
+    }
+
+    /* Bottom Menu full width */
+    .bottom-menu {
+        left: 0;
+    }
+
+    /* Overlay for drawer */
+    .sidebar-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 45;
+        display: none;
+    }
+
+    .sidebar-overlay.visible {
+        display: block;
+    }
+}
+
+/* Dark Mode Adjustments */
+@media (prefers-color-scheme: dark) {
+    .dashboard-sidebar {
+        background-color: #1f2937;
+        border-color: #374151;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        background-color: #374151;
+    }
+
+    .bottom-menu {
+        background-color: #1f2937;
+        border-color: #374151;
+    }
+
+    .mobile-header {
+        background-color: #0a0a0a;
+        border-color: #374151;
+    }
+
+    .hamburger-btn:hover {
+        background-color: #374151;
+    }
+
+    .hamburger-btn svg {
+        stroke: var(--foreground);
+        fill: var(--foreground);
+    }
+}
