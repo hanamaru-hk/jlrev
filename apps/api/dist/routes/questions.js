@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const questions_1 = require("../controllers/questions");
+const auth_1 = require("../middleware/auth");
+const router = (0, express_1.Router)();
+router.use(auth_1.authenticate);
+router.get('/', questions_1.getQuestionBanks);
+router.get('/:id', questions_1.getQuestionBank);
+exports.default = router;
