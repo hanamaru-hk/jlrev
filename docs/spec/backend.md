@@ -4,7 +4,7 @@
 The central nervous system. It handles user auth, database connections, and serves APIs to the frontends.
 
 ## Tech Stack
-- **Runtime:** Node.js (v22.17.0)
+- **Runtime:** Node.js (v24.6.0)
 - **Framework:** Express.js
 
 ## Functions

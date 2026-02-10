@@ -11,13 +11,13 @@
     *   Unified linting rules.
 
 ## 3. Sub Repository Structure
-*   app/
+*   apps/
     root of the monorepo
-*   app/mobile/
-*   app/web/
-*   app/apis/
-*   app/cronjobs/
-*   app/databases/
-*   app/shared/
+*   apps/mobile/
+*   apps/web/
+*   apps/api/
+*   apps/cronjobs/
+*   apps/databases/
+*   apps/shared/
     shared code between all subrepos
 
